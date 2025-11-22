@@ -2,7 +2,7 @@ import { StaticImageData } from 'next/image';
 
 // Image imports (actual files are in src/images)
 import oysterPearl from '../images/oyster-pearl.jpg';
-import nightLamp from '../images/Night lamp.png';
+import nightLamp from '../images/night-lamp.png';
 import heartNecklaceV1 from '../images/heart-necklace-v1.jpg';
 import infinityNecklace from '../images/infinity-necklace.jpg';
 import pearlNecklace from '../images/pearl-necklace.jpg';
@@ -21,7 +21,7 @@ import beads5 from '../images/beads5.jpg';
 import beads6 from '../images/beads6.jpg';
 import goldenBracelet2 from '../images/golden-bracelet.jpg';
 import goldenPearlEarring from '../images/golden-pearl-earring.jpg';
-import silverPearlEarrings from '../images/silver pearl earings.jpg';
+import silverPearlEarrings from '../images/silver-pearl-earrings.jpg';
 
 import polaroidSmall from '../images/small-polaroids.png';
 import polaroidMedium from '../images/medium-polaroids.png';
