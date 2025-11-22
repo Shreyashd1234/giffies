@@ -11,10 +11,10 @@ import { MetallicButton } from '@/components/ui/metallic-button';
 import { products } from '@/lib/products-data';
 import { useCartStore } from '@/lib/cart-store';
 import { Star, ShoppingCart, Heart, Share2, Package } from 'lucide-react';
-import pkgJiyo from '../../../images/packaging jiyo.png';
-import pkgThankYou from '../../../images/packaging thank you.jpg';
-import pkgKraft from '../../../images/packaging kraft.jpg';
-import pkgPink from '../../../images/packaging pink.jpg';
+import pkgJiyo from '../../../images/packaging-jiyo.png';
+import pkgThankYou from '../../../images/packaging-thank-you.jpg';
+import pkgKraft from '../../../images/packaging-kraft.jpg';
+import pkgPink from '../../../images/packaging-pink.jpg';
 
 const allPackagingOptions = [
   { id: 'jiyo', name: 'Jiyo Signature Gift Box', price: 15, image: pkgJiyo },

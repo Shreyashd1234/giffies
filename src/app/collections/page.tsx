@@ -9,10 +9,10 @@ import { Footer } from '@/components/footer';
 import { PageTransition } from '@/components/page-transition';
 import { MetallicButton } from '@/components/ui/metallic-button';
 import { ArrowRight } from 'lucide-react';
-import oysterPearl from '../../images/oyster pearl.jpg';
-import heartBracelet from '../../images/Heart Bracelet.jpg';
-import necklace1111 from '../../images/1111 Necklace.jpg';
-import polaroidSmall from '../../images/small polaroids.png';
+import oysterPearl from '../../images/oyster-pearl.jpg';
+import heartBracelet from '../../images/heart-bracelet.jpg';
+import necklace1111 from '../../images/1111-necklace.jpg';
+import polaroidSmall from '../../images/small-polaroids.png';
 
 const collections = [
   {

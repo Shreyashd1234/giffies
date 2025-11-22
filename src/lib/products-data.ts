@@ -1,33 +1,33 @@
 import { StaticImageData } from 'next/image';
 
 // Image imports (actual files are in src/images)
-import oysterPearl from '../images/oyster pearl.jpg';
+import oysterPearl from '../images/oyster-pearl.jpg';
 import nightLamp from '../images/Night lamp.png';
-import heartNecklaceV1 from '../images/Heart Necklace (V1).jpg';
-import infinityNecklace from '../images/Infinity Necklace.jpg';
-import pearlNecklace from '../images/Pearl Necklace.jpg';
-import infinityBracelet from '../images/Infinity Bracelet.jpg';
-import chainNecklace from '../images/Chain Necklace.jpg';
-import heartNecklaceV2 from '../images/Heart Necklace (V2).jpg';
-import necklace1111 from '../images/1111 Necklace.jpg';
-import heartRing from '../images/heart ring.png';
-import heartBracelet from '../images/Heart Bracelet.jpg';
-import goldenKada from '../images/Golden Kada.jpg';
+import heartNecklaceV1 from '../images/heart-necklace-v1.jpg';
+import infinityNecklace from '../images/infinity-necklace.jpg';
+import pearlNecklace from '../images/pearl-necklace.jpg';
+import infinityBracelet from '../images/infinity-bracelet.jpg';
+import chainNecklace from '../images/chain-necklace.jpg';
+import heartNecklaceV2 from '../images/heart-necklace-v2.jpg';
+import necklace1111 from '../images/1111-necklace.jpg';
+import heartRing from '../images/heart-ring.png';
+import heartBracelet from '../images/heart-bracelet.jpg';
+import goldenKada from '../images/golden-kada.jpg';
 import beads1 from '../images/beads1.jpg';
 import beads2 from '../images/beads2.jpg';
 import beads3 from '../images/beads3.jpg';
 import beads4 from '../images/beads4.jpg';
 import beads5 from '../images/beads5.jpg';
 import beads6 from '../images/beads6.jpg';
-import goldenBracelet2 from '../images/Golden bracelet .jpg';
-import goldenPearlEarring from '../images/golden pearl earing.jpg';
+import goldenBracelet2 from '../images/golden-bracelet.jpg';
+import goldenPearlEarring from '../images/golden-pearl-earring.jpg';
 import silverPearlEarrings from '../images/silver pearl earings.jpg';
 
-import polaroidSmall from '../images/small polaroids.png';
-import polaroidMedium from '../images/medium polaroids.png';
-import polaroidLarge from '../images/large polaroids.png';
-import spotifyFrame from '../images/spotify frame.png';
-import spotifyCards from '../images/spotify cards.png';
+import polaroidSmall from '../images/small-polaroids.png';
+import polaroidMedium from '../images/medium-polaroids.png';
+import polaroidLarge from '../images/large-polaroids.png';
+import spotifyFrame from '../images/spotify-frame.png';
+import spotifyCards from '../images/spotify-cards.png';
 
 export interface Product {
   id: string;
