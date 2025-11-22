@@ -11,12 +11,16 @@ import { MetallicButton } from '@/components/ui/metallic-button';
 import { products } from '@/lib/products-data';
 import { useCartStore } from '@/lib/cart-store';
 import { Star, ShoppingCart, Heart, Share2, Package } from 'lucide-react';
+import pkgJiyo from '../../../images/packaging jiyo.png';
+import pkgThankYou from '../../../images/packaging thank you.jpg';
+import pkgKraft from '../../../images/packaging kraft.jpg';
+import pkgPink from '../../../images/packaging pink.jpg';
 
 const allPackagingOptions = [
-  { id: 'jiyo', name: 'Jiyo Box', price: 15, image: '/assets/images/packaging.jpg', onlyFor: 'memories' },
-  { id: 'thankyou', name: 'Thank-You Box', price: 25, image: '/assets/images/packaging.jpg', forAll: true },
-  { id: 'kraft', name: 'Kraft Sheet', price: 35, image: '/assets/images/packaging.jpg', notWith: 'jiyo' },
-  { id: 'pink', name: 'Blush Pink', price: 15, image: '/assets/images/packaging.jpg', onlyFor: 'non-gold-jewelry' },
+  { id: 'jiyo', name: 'Jiyo Signature Gift Box', price: 15, image: pkgJiyo },
+  { id: 'thankyou', name: 'Thank-You Display Box', price: 25, image: pkgThankYou },
+  { id: 'kraft', name: 'Kraft Luxe Handmade Sheet', price: 35, image: pkgKraft },
+  { id: 'pink', name: 'Blush Pink Premium Wrap', price: 15, image: pkgPink },
 ];
 
 export default function ProductDetailPage() {
@@ -29,20 +33,36 @@ export default function ProductDetailPage() {
   // Determine available packaging based on product
   const availablePackaging = useMemo(() => {
     if (!product) return [];
-    
-    const isMemory = product.category === 'memories';
-    const isGoldJewelry = product.badge === 'Premium Gold' || product.category === 'jewelry';
-    const isNonGoldJewelry = product.category === 'jewelry' && product.badge !== 'Premium Gold';
-    
+    const isMemory = product.category === 'memories' || (product.tags || []).some(t => t === 'polaroid' || t === 'spotify');
+    const isGoldJewelry = product.badge === 'Premium Gold' || product.category === 'jewellery' || product.category === 'jewelry';
+    const isNonGoldJewelry = (product.category === 'jewellery' || product.category === 'jewelry') && product.badge !== 'Premium Gold';
+
     return allPackagingOptions.filter(option => {
-      // Jiyo: ONLY for memories
-      if (option.id === 'jiyo' && !isMemory) return false;
-      
-      // Pink: ONLY for non-gold jewelry
-      if (option.id === 'pink' && !isNonGoldJewelry) return false;
-      
-      // Kraft: Available for all (will be disabled if Jiyo selected)
-      // Thank-You: Available for all
+      // Jiyo: ONLY for memory-type products (polaroids/spotify)
+      if (option.id === 'jiyo') {
+        // respect explicit packagingAllowed on product if provided
+        if (product.packagingAllowed && !product.packagingAllowed.includes('jiyo')) return false;
+        return isMemory;
+      }
+
+      // Pink: ONLY for non-gold jewellery (not allowed for gold products or memories)
+      if (option.id === 'pink') {
+        if (product.packagingAllowed && !product.packagingAllowed.includes('pink')) return false;
+        return isNonGoldJewelry;
+      }
+
+      // Kraft: allowed for all except we'll later disable it when Jiyo selected on UI
+      if (option.id === 'kraft') {
+        if (product.packagingAllowed && !product.packagingAllowed.includes('kraft')) return false;
+        return true;
+      }
+
+      // Thank-You: allowed for all (respect packagingAllowed if present)
+      if (option.id === 'thankyou') {
+        if (product.packagingAllowed && !product.packagingAllowed.includes('thankyou')) return false;
+        return true;
+      }
+
       return true;
     });
   }, [product]);
@@ -129,7 +149,7 @@ export default function ProductDetailPage() {
                       <Star
                         key={i}
                         className={`w-5 h-5 ${
-                          i < Math.floor(product.rating)
+                          i < Math.floor(product.rating ?? 0)
                             ? 'fill-[#D4AF37] text-[#D4AF37]'
                             : 'text-gray-300'
                         }`}
@@ -137,7 +157,6 @@ export default function ProductDetailPage() {
                     ))}
                   </div>
                   <span className="text-lg font-semibold">{product.rating}</span>
-                  <span className="text-gray-500">({product.reviews} reviews)</span>
                 </div>
 
                 {/* Price */}

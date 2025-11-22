@@ -9,35 +9,39 @@ import { Footer } from '@/components/footer';
 import { PageTransition } from '@/components/page-transition';
 import { MetallicButton } from '@/components/ui/metallic-button';
 import { ArrowRight } from 'lucide-react';
+import oysterPearl from '../../images/oyster pearl.jpg';
+import heartBracelet from '../../images/Heart Bracelet.jpg';
+import necklace1111 from '../../images/1111 Necklace.jpg';
+import polaroidSmall from '../../images/small polaroids.png';
 
 const collections = [
   {
-    id: 'luxury-jewelry',
-    title: 'Luxury Jewelry Collection',
-    description: 'Exquisite pieces that tell a story of elegance and sophistication',
-    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1200',
+    id: 'best-experience',
+    title: 'Best Experience',
+    description: 'Pearl Oyster — a memorable unboxing experience that creates lasting memories. Perfect for milestone moments and keepsakes.',
+  image: oysterPearl,
     color: 'from-[#D4AF37] to-[#B8941E]'
   },
   {
-    id: 'artisan-chocolates',
-    title: 'Artisan Chocolates & Sweets',
-    description: 'Handcrafted delicacies that melt hearts and create sweet memories',
-    image: 'https://images.unsplash.com/photo-1511381939415-e44015466834?w=1200',
+    id: 'premium-gold',
+    title: 'Premium Gold Collection',
+    description: 'Golden Kada, Heart Bracelet and other premium gold pieces — timeless, elegant and perfect for gifting special relationships.',
+  image: heartBracelet,
+    color: 'from-[#D4AF37] to-[#6B4E71]'
+  },
+  {
+    id: 'most-trendy',
+    title: 'Most Trendy',
+    description: 'Viral favourites like the 11:11 Necklace — curated for trend-forward gifting and social moments.',
+  image: necklace1111,
     color: 'from-[#6B4E71] to-[#4A3352]'
   },
   {
-    id: 'wellness-spa',
-    title: 'Wellness & Spa Collection',
-    description: 'Curated self-care essentials for moments of tranquility and rejuvenation',
-    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=1200',
+    id: 'trending-memories',
+    title: 'Trending Memories',
+    description: 'Polaroids, Spotify Frames and Cards — personalised memory gifts that tell your story.',
+  image: polaroidSmall,
     color: 'from-[#B8A5C7] to-[#6B4E71]'
-  },
-  {
-    id: 'premium-accessories',
-    title: 'Premium Accessories',
-    description: 'Sophisticated pieces that elevate everyday style with timeless charm',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200',
-    color: 'from-[#E0BFB8] to-[#D4AF37]'
   }
 ];
 

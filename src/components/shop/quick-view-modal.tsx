@@ -97,7 +97,7 @@ export function QuickViewModal({ product, isOpen, onClose }: QuickViewModalProps
                         <Star
                           key={i}
                           className={`w-5 h-5 ${
-                            i < Math.floor(product.rating)
+                            i < Math.floor(product.rating ?? 0)
                               ? 'fill-[#D4AF37] text-[#D4AF37]'
                               : 'text-gray-300'
                           }`}
@@ -105,9 +105,6 @@ export function QuickViewModal({ product, isOpen, onClose }: QuickViewModalProps
                       ))}
                     </div>
                     <span className="text-sm font-semibold">{product.rating}</span>
-                    <span className="text-sm text-gray-500">
-                      ({product.reviews} reviews)
-                    </span>
                   </div>
 
                   {/* Price */}

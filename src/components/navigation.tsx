@@ -27,6 +27,7 @@ export function Navigation() {
     { href: '/collections', label: 'Collections' },
     { href: '/corporate', label: 'Corporate Gifts' },
     { href: '/about', label: 'About' },
+    { href: '/make-your-own-set', label: 'Make Your Own Set' },
   ];
 
   return (

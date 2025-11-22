@@ -6,31 +6,38 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Priya Sharma',
-    role: 'Event Planner',
+    name: '@giffies_acessories',
+    role: 'Customer',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400',
-    text: "GIFFIES transformed our corporate event! The personalized gifts were a huge hit with our clients. The quality and presentation exceeded all expectations.",
+    text: 'Thanks @giffies_acessories for the gift! The brand truly understands people’s choices. Looking forward to ordering more amazing pieces.',
     rating: 5
   },
   {
-    name: 'Rahul Verma',
-    role: 'Business Owner',
+    name: '@giffies.co',
+    role: 'Customer',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
-    text: "Exceptional service and premium quality gifts. The team helped me find perfect gifts for my entire team. Highly recommend for corporate gifting!",
+    text: 'Thanks @giffies.co for the Spotify cards. I’m absolutely in love! Aesthetic, well-printed and each one feels like a little memory with its own soundtrack.',
     rating: 5
   },
   {
-    name: 'Ananya Reddy',
-    role: 'Marketing Director',
+    name: '@giffies.co',
+    role: 'Customer',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400',
-    text: "The attention to detail in packaging and the curated selection makes GIFFIES stand out. Our clients always appreciate the thoughtful gifts we send through them.",
+    text: 'Thanks @giffies.co for this personalized Spotify frame. The quality and detailing were perfect — made the moment even more special.',
     rating: 5
   },
   {
-    name: 'Vikram Singh',
-    role: 'HR Manager',
+    name: '@giffies.co',
+    role: 'Customer',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400',
-    text: "Best gifting platform I have used! The gift finder tool made it so easy to choose perfect gifts for different occasions. Fast delivery and beautiful packaging!",
+    text: 'Thanks @giffies.co for these wonderful polaroids. Quality is amazing, packaging is beautiful and delivery was super fast!',
+    rating: 5
+  },
+  {
+    name: '@giffies.co',
+    role: 'Customer',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400',
+    text: 'Just received my order from @giffies.co and I’m OBSESSED! Beautiful pieces, premium packaging and amazing quality. Definitely ordering again.',
     rating: 5
   }
 ];

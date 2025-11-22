@@ -1,6 +1,7 @@
 "use client";
 
 import { create } from 'zustand';
+import { StaticImageData } from 'next/image';
 import { persist } from 'zustand/middleware';
 
 export interface CartItem {
@@ -8,7 +9,8 @@ export interface CartItem {
   name: string;
   price: number;
   quantity: number;
-  image: string;
+  // images may be static imports (StaticImageData) or remote/public URLs
+  image: string | StaticImageData;
   packaging?: string;
 }
 

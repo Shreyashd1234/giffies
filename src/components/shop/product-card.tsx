@@ -99,7 +99,6 @@ export function ProductCard({ product, index, onQuickView }: ProductCardProps) {
               <div className="flex items-center gap-1 mt-1">
                 <Star className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
                 <span className="text-sm font-semibold">{product.rating}</span>
-                <span className="text-sm text-gray-500">({product.reviews})</span>
               </div>
             </div>
           </div>
